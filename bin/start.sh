@@ -152,6 +152,16 @@ set_property "guacd-port"     "$GUACD_PORT_4822_TCP_PORT"
 
 INSTALLED_AUTH="userfiles"
 
+#put some files in place
+echo "    <user-mapping>
+
+        <!-- This needs to be empty. -->
+
+    </user-mapping>"  > $GUACAMOLE_HOME/user-mapping.xml
+echo "    <configs>
+
+    </configs>" > $GUACAMOLE_HOME/noauth-config.xml
+
 #
 # Finally start Guacamole (under Tomcat)
 #
