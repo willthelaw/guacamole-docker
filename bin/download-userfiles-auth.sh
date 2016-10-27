@@ -53,34 +53,5 @@ mkdir -p "$DESTINATION"
 # Download Guacamole JDBC auth
 #
 
-echo "Downloading JDBC auth version $VERSION ..."
-curl -L "http://sourceforge.net/projects/guacamole/files/current/extensions/guacamole-auth-jdbc-$VERSION.tar.gz" | \
-tar -xz                  \
-    -C "$DESTINATION"    \
-    --wildcards          \
-    --no-anchored        \
-    --strip-components=1 \
-    "*.jar"              \
-    "*.sql"
-
-#
-# Download MySQL JDBC driver
-#
-
-echo "Downloading MySQL Connector/J ..."
-curl -L "http://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.35.tar.gz" | \
-tar -xz                        \
-    -C "$DESTINATION/mysql/"   \
-    --wildcards                \
-    --no-anchored              \
-    --no-wildcards-match-slash \
-    --strip-components=1       \
-    "mysql-connector-*.jar"
-
-#
-# Download PostgreSQL JDBC driver
-#
-
-echo "Downloading PostgreSQL JDBC driver ..."
-curl -L "https://jdbc.postgresql.org/download/postgresql-9.4-1201.jdbc41.jar" > "$DESTINATION/postgresql/postgresql-9.4-1201.jdbc41.jar"
-
+echo "Downloading auth-user-files auth version $VERSION ..."
+curl -L "https://github.com/GreenRover/guacamole-auth-userfiles/releases/download/$VERSION/guacamole-auth-userfiles-$VERSION.jar"
