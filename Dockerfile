@@ -41,6 +41,6 @@ RUN \
     /opt/guacamole/bin/download-userfiles-auth.sh "$GUAC_VERSION" /opt/guacamole
 
 # Start Guacamole under Tomcat, listening on 0.0.0.0:8080
-EXPOSE 8181
+EXPOSE 8080
 CMD ["/opt/guacamole/bin/start.sh" ]
 
