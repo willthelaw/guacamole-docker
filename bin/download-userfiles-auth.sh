@@ -54,4 +54,4 @@ mkdir -p "$DESTINATION"
 #
 
 echo "Downloading auth-user-files auth version $VERSION ..."
-curl -L "https://github.com/GreenRover/guacamole-auth-userfiles/releases/download/$VERSION/guacamole-auth-userfiles-$VERSION.jar"
+curl -o /opt/guacamole/guacamole-auth-userfiles-$VERSION.jar -L "https://github.com/GreenRover/guacamole-auth-userfiles/releases/download/$VERSION/guacamole-auth-userfiles-$VERSION.jar"
