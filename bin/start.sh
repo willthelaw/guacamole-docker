@@ -86,13 +86,9 @@ set_optional_property() {
 }
 
 ##
-## Adds properties to guacamole.properties which select the MySQL
-## authentication provider, and configure it to connect to the linked MySQL
-## container. If a MySQL database is explicitly specified using the
-## MYSQL_HOSTNAME and MYSQL_PORT environment variables, that will be used
-## instead of a linked container.
+#adds jar for userfiles, creates symlink
 ##
-associate_authfilesl() {
+associate_authfiles() {
 
 
     # Update config file
@@ -149,6 +145,7 @@ set_property "guacd-port"     "$GUACD_PORT_4822_TCP_PORT"
 #
 # Track which authentication backends are installed
 #
+associate_authfiles
 
 INSTALLED_AUTH="userfiles"
 
