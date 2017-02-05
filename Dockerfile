@@ -30,7 +30,7 @@ MAINTAINER Michael Jumper <mike.jumper@guac-dev.org>
 
 # Version info
 ENV \
-    GUAC_VERSION=0.9.9
+    GUAC_VERSION=0.9.11-incubating
 
 # Add configuration scripts
 COPY bin /opt/guacamole/bin/
